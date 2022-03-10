@@ -5,7 +5,7 @@ import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
 import millify from "millify";
-const defaultImage = "";
+import defaultImg from "../assets/images/house.jpg"
 
 const Property = ({
   property: {
@@ -17,11 +17,11 @@ const Property = ({
     baths,
     agency,
     isVerified,
-    externalId,
+    externalID,
     area
   },
 }) => (
-  <Link href={`/property/${externalId}`} passHref>
+  <Link href={`/property/${externalID}`} passHref>
     <Flex
       flexWrap="wrap"
       w="420px"
@@ -32,7 +32,7 @@ const Property = ({
     >
       <Box>
         <Image
-          src={coverPhoto ? coverPhoto.url : defaultImage}
+          src={coverPhoto ? coverPhoto.url : defaultImg}
           alt="property"
           width={400}
           height={260}
